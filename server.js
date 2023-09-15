@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+const lesson1Controller = require('./controllers/lesson1');
+
  
-app.get('/', (req, res) => {
-  res.send("Anelisa Ozolin");
-});
+app.get('/', lesson1Controller.anneRoute);
+
+app.get('/koda', lesson1Controller.kodaRoute);
  
 const port = 3000;
 
